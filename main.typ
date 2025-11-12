@@ -21,7 +21,7 @@
 #counter(page).update(1)
 
 #if abstract == true {
-  include "abstract.typ"
+  include "content/abstract.typ"
 }
 #pagebreak()
 
@@ -37,4 +37,4 @@
 #pagebreak()
 
 
-#include "content.typ"
+#include "content/content.typ"
