@@ -16,7 +16,7 @@
   numbering: "1"
 )
 #show heading: set block(below: 1em)
-#show raw: set block(fill: rgb(230, 230, 230), inset: 1em)
+#show raw: set block(fill: rgb(245, 245, 245), inset: 1em, width: 100%)
 
 #counter(page).update(1)
 
