@@ -8,7 +8,7 @@
   margin: (top: 4cm),
   header: align(right)[
     #pad(
-      image("images/DHBW-Logo.svg"),
+      image(logo),
       top: 1cm
     )
     #line(length: 100%)
