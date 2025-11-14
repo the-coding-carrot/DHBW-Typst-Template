@@ -1,5 +1,5 @@
 #import "../util.typ": *
-= Erstes Thema
+= Erstes Thema <Erstes-Thema>
 Abc
 #todo[Beispiel]
 Hallo
@@ -9,3 +9,5 @@ Hallo
 def x():
   pass
 ```
+
+Wie bereits in @Erstes-Thema erwähnt, ist das nur ein Beispiel.
