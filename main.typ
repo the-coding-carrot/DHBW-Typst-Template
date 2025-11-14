@@ -29,7 +29,7 @@ else [Bibliography])
 
 #counter(page).update(1)
 
-#if abstract == true {
+#if show_abstract == true {
   include "content/abstract.typ"
 }
 #pagebreak()
@@ -48,4 +48,7 @@ else [Bibliography])
 
 #include "content/content.typ"
 #pagebreak()
-#bibliography("bibliography.bib")
+
+#if show_bibliography == true {
+  bibliography("bibliography.bib")
+}
