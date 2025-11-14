@@ -17,7 +17,7 @@ jobs:
     - name: Typst installieren
       run: |
         curl -fsSL https://typst.app/install.sh | sh -s -- --yes
-        echo "$HOME/.typst/bin" >> $GITHUB_PATH
+        echo "$HOME/.local/bin" >> $GITHUB_PATH
 
     - name: PDF kompilieren
       run: typst compile main.typ
