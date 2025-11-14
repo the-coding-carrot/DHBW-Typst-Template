@@ -14,10 +14,11 @@ jobs:
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
 
+    - name: Rust und Cargo installieren
+      uses: dtolnay/rust-toolchain@stable
+
     - name: Typst installieren
-      run: |
-        curl -fsSL https://typst.app/install.sh | sh -s -- --yes
-        echo "$HOME/.local/bin" >> $GITHUB_PATH
+      run: cargo install --locked typst
 
     - name: Such nach Typst
       run: |
