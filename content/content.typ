@@ -5,9 +5,10 @@ Abc
 Hallo
 #lorem(1000)
 
-```python
+#figure(```python
 def x():
   pass
-```
+```,
+caption: [Nutzloser Code]) <Nutzloser-Code>
 
-Wie bereits in @Erstes-Thema erwähnt, ist das nur ein Beispiel.
+Wie bereits in @Erstes-Thema erwähnt, ist @Nutzloser-Code nur ein Beispiel.
