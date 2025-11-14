@@ -23,6 +23,10 @@
   else {x.supplement}
 })
 
+#set bibliography(title: 
+if language == "de" [Literaturverzeichnis]
+else [Bibliography])
+
 #counter(page).update(1)
 
 #if abstract == true {
@@ -43,3 +47,5 @@
 
 
 #include "content/content.typ"
+#pagebreak()
+#bibliography("bibliography.bib")
