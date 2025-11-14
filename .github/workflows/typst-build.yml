@@ -1,0 +1,36 @@
+name: Typst PDF build
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Repository auschecken
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Typst installieren
+      run: |
+        wget https://github.com/typst/typst/releases/latest/download/typst-x86_64-unknown-linux-musl.tar.gz
+        tar -xzf typst-x86_64-unknown-linux-musl.tar.gz
+        sudo mv typst-x86_64-unknown-linux-musl/typst /usr/local/bin/typst
+
+    - name: PDF kompilieren
+      run: typst compile main.typ
+
+    - name: PDF ins Repo kopieren
+      run: cp main.pdf main.pdf
+
+    - name: Änderungen committen und pushen
+      run: |
+        git config --global user.name "github-actions"
+        git config --global user.email "actions@github.com"
+        git add main.pdf
+        git commit -m "Auto-update PDF"
+        git push
+      continue-on-error: true
