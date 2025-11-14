@@ -16,9 +16,8 @@ jobs:
 
     - name: Typst installieren
       run: |
-        wget https://github.com/typst/typst/releases/latest/download/typst-x86_64-unknown-linux-musl.tar.gz
-        tar -xzf typst-x86_64-unknown-linux-musl.tar.gz
-        sudo mv typst-x86_64-unknown-linux-musl/typst /usr/local/bin/typst
+        curl -fsSL https://typst.app/install.sh | sh -s -- --yes
+        echo "$HOME/.typst/bin" >> $GITHUB_PATH
 
     - name: PDF kompilieren
       run: typst compile main.typ
