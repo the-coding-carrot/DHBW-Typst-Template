@@ -19,6 +19,13 @@ jobs:
         curl -fsSL https://typst.app/install.sh | sh -s -- --yes
         echo "$HOME/.local/bin" >> $GITHUB_PATH
 
+    - name: Such nach Typst
+      run: |
+        echo "Suche nach typst..."
+        find $HOME -type f -name "typst" -print || true
+        ls -R $HOME/.local || true
+        ls -R $HOME/.typst || true
+
     - name: PDF kompilieren
       run: typst compile main.typ
 
