@@ -14,12 +14,11 @@ jobs:
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
 
+    - name: Rust und Cargo installieren
+      uses: dtolnay/rust-toolchain@stable
+
     - name: Typst installieren
-      run: |
-        wget https://github.com/typst/typst/releases/latest/download/typst-x86_64-linux.zip
-        unzip typst-x86_64-linux.zip -d typst-bin
-        chmod +x typst-bin/typst
-        echo "$(pwd)/typst-bin" >> $GITHUB_PATH
+      run: cargo install --locked typst-cli
 
     - name: Such nach Typst
       run: |
