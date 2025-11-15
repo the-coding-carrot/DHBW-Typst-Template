@@ -3,6 +3,8 @@ name: Typst PDF build
 on:
   push:
     branches: [ "main" ]
+    paths:
+      - '**/*.typ'
 
 jobs:
   build:
