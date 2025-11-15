@@ -11,4 +11,4 @@ def x():
 ```,
 caption: [Nutzloser Code]) <Nutzloser-Code>
 
-Wie bereits in @Erstes-Thema erwähnt, ist @Nutzloser-Code nur ein Beispiel (siehe @example). Hallo
+Wie bereits in @Erstes-Thema erwähnt, ist @Nutzloser-Code nur ein Beispiel (siehe @example).
