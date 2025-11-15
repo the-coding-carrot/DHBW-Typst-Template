@@ -12,7 +12,7 @@ jobs:
     - name: Repository auschecken
       uses: actions/checkout@v4
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
+        persist-credentials: false
 
     - name: Rust und Cargo installieren
       uses: dtolnay/rust-toolchain@stable
