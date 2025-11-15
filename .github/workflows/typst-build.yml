@@ -20,9 +20,28 @@ jobs:
     - name: Rust und Cargo installieren
       uses: dtolnay/rust-toolchain@stable
 
-    - name: Typst installieren
-      run: cargo install --locked typst-cli
+    - name: Restore Cargo Cache
+      uses: actions/cache@v3
+      id: cargo-cache
+      with:
+        path: |
+          ~/.cargo/bin
+          ~/.cargo/registry
+          ~/.cargo/git
+        key: cargo-typst-${{ runner.os }}-v0.14.0
 
+    - name: Install Typst CLI
+      run: cargo install --locked typst-cli || true
+
+    - name: Save Cargo Cache
+      uses: actions/cache@v3
+      with:
+        path: |
+          ~/.cargo/bin
+          ~/.cargo/registry
+          ~/.cargo/git
+        key: cargo-typst-${{ runner.os }}-v0.14.0 
+    
     - name: PDF kompilieren
       run: typst compile main.typ
 
