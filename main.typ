@@ -23,9 +23,9 @@
   else {x.supplement}
 })
 
-#set bibliography(title: 
-if language == "de" [Literaturverzeichnis]
-else [Bibliography])
+#set figure(supplement: [Abbildung]) if language == "de"
+
+#set bibliography(title: [Literaturverzeichnis]) if language == "de"
 
 #counter(page).update(1)
 
@@ -41,7 +41,7 @@ else [Bibliography])
 #if language == "de" {
   outline(title: "Inhaltsverzeichnis")
 } else {
-  outline(title: "Contents")
+  outline()
 }
 #pagebreak()
 
