@@ -23,7 +23,7 @@
   else {x.supplement}
 })
 
-#set figure(supplement: [Abbildung]) if language == "de"
+#show figure.where(kind: image): set figure(supplement: [Abbildung]) if language == "de"
 
 #set bibliography(title: [Literaturverzeichnis]) if language == "de"
 
