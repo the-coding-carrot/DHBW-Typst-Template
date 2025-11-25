@@ -17,6 +17,6 @@
 
 #align(center)[
   #autor \
-  #matnr \
+  Matrikelnummer: #matnr \
   #link("mailto:" + email)\
 ]
