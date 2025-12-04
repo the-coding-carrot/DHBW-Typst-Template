@@ -5,6 +5,8 @@ Abc
 Hallo
 #lorem(1000)
 
+== Zweites Thema
+
 #figure(```python
 def x():
   pass

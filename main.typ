@@ -1,4 +1,5 @@
 #import "config.typ": *
+#import "util.typ": *
 
 #set document(title: titel)
 
@@ -6,16 +7,30 @@
 
 #set page(
   margin: (top: 4cm),
-  header: align(right)[
-    #pad(
-      image(logo),
-      top: 1cm
+  numbering: "1",
+  header: grid(
+    columns: 2, 
+    rows: 2, 
+    pad(bottom: 1em)[
+    #header_heading
+  ], 
+  grid.cell(
+    align: horizon + right, 
+    pad(image("images/DHBW-Logo.svg", width: 12em), 
+    bottom: 1em)
+    ), 
+    grid.cell(
+      colspan: 2, 
+      [#line(length: 100%)]
     )
-    #line(length: 100%)
-  ],
-  numbering: "1"
+  )
 )
-#show heading: set block(below: 1em)
+#show heading: it => {
+  set block(below: 1em)
+  it
+  active_heading.update(it.body)
+  }
+
 #show raw: set block(fill: rgb(245, 245, 245), inset: 1em, width: 100%)
 #show raw.where(block: false): box.with(fill: luma(240), inset:(x: 0.4em), outset: (y: 0.3em), radius: 2pt)
 
