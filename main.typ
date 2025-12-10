@@ -72,8 +72,8 @@
 
 
 #include "content/content.typ"
-#pagebreak()
 
 #if show_bibliography == true {
+  pagebreak()
   bibliography("bibliography.bib")
 }
