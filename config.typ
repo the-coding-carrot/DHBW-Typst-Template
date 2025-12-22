@@ -1,4 +1,4 @@
-#let titel = "Titel"
+#let titel = [Titel]
 #let language = "de" //"de" || "en"
 #let autor = "Max Mustermann"
 #let matnr = "12345"
