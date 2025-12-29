@@ -2,6 +2,7 @@
 #import "util.typ": *
 
 #set document(title: titel)
+#set text(lang: language)
 
 #include "cover.typ"
 
@@ -36,10 +37,9 @@
 
 #show ref.where(form: "normal"): set ref(supplement: x => {
   if x.func() == heading and language == "de" [Kapitel] 
+  else if x.func() == heading and language == "en" [Chapter]
   else {x.supplement}
 })
-
-#show figure.where(kind: image): set figure(supplement: [Abbildung]) if language == "de"
 
 #set bibliography(title: [Literaturverzeichnis]) if language == "de"
 
@@ -59,14 +59,14 @@
     outline(target: figure.where(kind: image), title: "Abbildungsverzeichnis")
     pagebreak()
   }
-  outline(title: "Inhaltsverzeichnis")
+  outline()
   pagebreak()
 } else {
   if show_figure_outline == true {
-    outline(target: figure.where(kind: image), title: "Table of Figures")
+    outline(target: figure.where(kind: image), title: "Figures")
     pagebreak()
   }
-  outline(title: "Table of Contents")
+  outline()
   pagebreak()
 }
 
