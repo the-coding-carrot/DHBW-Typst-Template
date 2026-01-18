@@ -53,21 +53,29 @@
 #set heading(
   numbering: "1."
 )
+#{
+  set footnote.entry(separator: none)
+  show footnote.entry: none
+  show ref: none
+  show footnote: none
 
-#if language == "de" {
-  if show_figure_outline == true {
-    outline(target: figure.where(kind: image), title: "Abbildungsverzeichnis")
+  if language == "de" {
+    outline()
     pagebreak()
-  }
-  outline()
-  pagebreak()
-} else {
-  if show_figure_outline == true {
-    outline(target: figure.where(kind: image), title: "Figures")
+    if show_figure_outline == true {
+      outline(target: figure.where(kind: image), title: "Abbildungsverzeichnis")
+      pagebreak()
+    }
+  } else {
+    outline()
     pagebreak()
+    if show_figure_outline == true {
+      outline(target: figure.where(kind: image), title: "Figures")
+      pagebreak()
+    }
   }
-  outline()
-  pagebreak()
+
+  counter(footnote).update(0)
 }
 
 
