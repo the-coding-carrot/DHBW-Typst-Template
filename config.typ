@@ -8,3 +8,4 @@
 #let logo = "images/DHBW-Logo.svg"
 #let show_bibliography = true
 #let show_figure_outline = true
+#let show_ref_in_outline = false

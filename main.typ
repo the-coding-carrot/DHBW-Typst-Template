@@ -3,6 +3,7 @@
 
 #set document(title: titel)
 #set text(lang: language)
+#set par(justify: true)
 
 #include "cover.typ"
 
@@ -56,7 +57,7 @@
 #{
   set footnote.entry(separator: none)
   show footnote.entry: none
-  show ref: none
+  show ref: it => {if show_ref_in_outline == false {none} else {it}}
   show footnote: none
 
   if language == "de" {
