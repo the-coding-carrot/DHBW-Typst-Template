@@ -11,6 +11,6 @@ Hallo
 def x():
   pass
 ```,
-caption: [Nutzloser Code]) <Nutzloser-Code>
+caption: [Code]) <Code>
 
-Wie bereits in @Erstes-Thema erwähnt, ist @Nutzloser-Code nur ein Beispiel (siehe @example).
+Wie bereits in @Erstes-Thema erwähnt, ist @Code nur ein Beispiel (siehe @example).
