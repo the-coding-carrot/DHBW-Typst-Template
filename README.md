@@ -1,5 +1,9 @@
 Dies ist ein einfaches Template für Hausarbeiten an der DHBW.
 
+# Installation
+"Use this template" anklicken um ein neues Repository mit diesem Template zu erzeugen.
+
+# Komponenten
 In `config.typ` kann man Parameter, wie Sprache, Name, Matrikelnummer, etc. einstellen
 
 In `content/content.typ` kommt der Inhalt rein.
